@@ -1,5 +1,4 @@
 # wlsUBUNTU_settings
-## Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!
 
 The updateSettings.bash script will defeat some of the bugs in the Ubuntu **W**indows **L**inux **S**ubsystem. Most fixes are specific to TAMUCC's computers, but the script can be modified to your institution.  
 1. creates environmental variable winhome with path to the windows home directory, ex: `cd $winhome`
@@ -8,12 +7,17 @@ The updateSettings.bash script will defeat some of the bugs in the Ubuntu **W**i
 4. creates a .ssh/config file to enable X11 functionality (run linux gui apps) if xming is installed and running
 5. modifies behavior of cursor when using ssh to connect to a remote server, solving annoying issues with using nano on a rmeote server
 
-After [installing Ubuntu and xming](https://github.com/cbirdlab/wlsUBUNTU_settings/blob/master/InstallLinuxOnWindows_Automated.pdf), log into your Ubuntu terminal and run the following commands:
+## If you've installed Ubuntu, then log into your Ubuntu terminal and run the following commands:
 ```
 git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
 . ./wlsUBUNTU_settings/updateSettings.bash
 rm -rf wlsUBUNTU_settings
 ```
+
+
+## If you need to install Ubuntu on Win10 then follow these instructions
+## [Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!](https://github.com/cbirdlab/wlsUBUNTU_settings/blob/master/InstallLinuxOnWindows_Automated.pdf)
+Follow these instructions to enable the windows linux subsystem, install the Ubuntu app, update the settings, and install xming so that you can run gui linux program.s.
 
 
 
