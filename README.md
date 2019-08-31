@@ -1,4 +1,6 @@
 # wlsUBUNTU_settings
+## Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!
+
 The updateSettings.bash script will defeat some of the bugs in the Ubuntu **W**indows **L**inux **S**ubsystem. Most fixes are specific to TAMUCC's computers, but the script can be modified to your institution.  
 1. creates environmental variable winhome with path to the windows home directory, ex: `cd $winhome`
 2. modifies the .bashrc with `DISPLAY` and `TERM` settings that work well with TAMUCC's hpc
