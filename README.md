@@ -1,5 +1,5 @@
 # wlsUBUNTU_settings
-The updateSettings.bash script will defeat some of the bugs in the Ubuntu Windows Linux Subsystem. Most fixes are specific to TAMUCC's computers, but the script can be modified to your institution.  
+The updateSettings.bash script will defeat some of the bugs in the Ubuntu **W**indows **L**inux **S**ubsystem. Most fixes are specific to TAMUCC's computers, but the script can be modified to your institution.  
 1. creates environmental variable winhome with path to the windows home directory, ex: `cd $winhome`
 2. modifies the .bashrc with `DISPLAY` and `TERM` settings that work well with TAMUCC's hpc
 3. associates the name of a remote server with its ip address
