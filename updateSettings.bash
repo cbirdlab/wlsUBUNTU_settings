@@ -12,7 +12,7 @@ else
 	echo updating .bashrc
 	echo "" >> .bashrc
 	echo "#$USER: add shortcut to windows home directory" >> .bashrc
-	echo export winhome="/mnt/c/Users/$USER/" >> .bashrc
+	echo export winhome="/mnt/c/Users/$USER" >> .bashrc
 	echo "" >> .bashrc
 	echo "#$USER: set display" >> .bashrc
 	echo export DISPLAY=:0 >> .bashrc
@@ -73,9 +73,9 @@ else
 fi
 if [ ! -f .ssh/config ]; then
 	echo making .ssh/config file
-	touch .ssh/config
-	echo "ForwardX11 yes" >> .ssh/config
+	echo "ForwardX11 yes" > .ssh/config
 else
+	chmod 700 .ssh/config	
 	if grep -q 'ForwardX11 yes' .ssh/config; then
 		echo no changes made, .ssh/config already modified
 	else
@@ -83,7 +83,7 @@ else
 		echo "ForwardX11 yes" >> .ssh/config
 	fi
 fi
-
+chmod 600 .ssh/config
 
 #modify .profile
 if grep -q 'stty sane' .profile; then
