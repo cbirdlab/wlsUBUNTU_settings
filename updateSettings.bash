@@ -7,8 +7,14 @@ cd ~
 
 #add settings to .bashrc
 if grep -q 'export winhome' .bashrc; then
-	echo no changes, .bashrc already updated
-else
+	
+	if grep -q '^bash initialize\.bash$' .bashrc; then
+		echo disabling initialize.bash in .bashrc
+		sed -i 's/^bash initialize\.bash$/#bash initialize\.bash/g' .bashrc
+	else
+		echo no changes, .bashrc already updated
+	fi
+else 
 	echo updating .bashrc
 	echo "" >> .bashrc
 	echo "#$USER: add shortcut to windows home directory" >> .bashrc
@@ -23,8 +29,6 @@ else
 	#echo "#$USER: initialize the /etc/hosts so that I don't have to type in IP addresses" >> .bashrc
 	#the issue this fixed seems to have been fixed in an wls ubuntu update
 	#echo bash initialize.bash >> .bashrc
-	#disable previous installation of "fix"
-	sed -i 's/^bash initialize\.bash$/#bash initialize\.bash/g' .bashrc
 fi
 
 
