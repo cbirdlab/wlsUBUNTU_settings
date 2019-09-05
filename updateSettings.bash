@@ -20,45 +20,49 @@ else
 	echo "#$USER: set TERM to stop nano cursor misbehavior when ssh to server" >> .bashrc
 	echo export TERM=xterm >> .bashrc
 	echo "" >> .bashrc
-	echo "#$USER: initialize the /etc/hosts so that I don't have to type in IP addresses" >> .bashrc
-	echo bash initialize.bash >> .bashrc
+	#echo "#$USER: initialize the /etc/hosts so that I don't have to type in IP addresses" >> .bashrc
+	#the issue this fixed seems to have been fixed in an wls ubuntu update
+	#echo bash initialize.bash >> .bashrc
+	#disable previous installation of "fix"
+	sed -i 's/^bash initialize\.bash$/#bash initialize\.bash/g' .bashrc
 fi
 
 
 #make initialization script which replaces the default hosts with my hosts
-if [ ! -f "initialize.bash" ];then
-	echo making initialize.bash script
-	touch intialize.bash
-	echo "#!/bin/bash" >> initialize.bash
-	echo "#this script initializes cbird's custom settings in UBUNTU on WINDOWS" >> initialize.bash
-	echo "sudo chmod 777 /etc/hosts" >> initialize.bash
-	echo "cp ~/hosts /etc" >> initialize.bash
-	echo "sudo chmod 555 /etc/hosts" >> initialize.bash
-else
-	echo no changes made, initialize.bash already exists
-fi
+#the issue this fixed seems to have been fixed in an wls ubuntu update
+#if [ ! -f "initialize.bash" ];then
+#	echo making initialize.bash script
+#	echo "#!/bin/bash" > initialize.bash
+#	echo "#this script initializes cbird's custom settings in UBUNTU on WINDOWS" >> initialize.bash
+#	echo "sudo chmod 777 /etc/hosts" >> initialize.bash
+#	echo "cp ~/hosts /etc" >> initialize.bash
+#	echo "sudo chmod 555 /etc/hosts" >> initialize.bash
+#else
+#	echo no changes made, initialize.bash already exists
+#fi
 
 #copy hosts to home directory & modify. This copy of hosts will overwrite the default at startup
-if [ -f "hosts" ];then
-	echo hosts file exists
-	if grep -q '10.20.1.189' hosts; then
-		echo hpcm.tamucc.edu found, no changes made to hosts
-	else
-		echo adding hpcm.tamucc.edu to hosts
-		sudo chmod 777 hosts
-		sed 's/\(127\.0\.0\.1\tlocalhost\)/\1\n10\.20\.1\.189\thpcm\.tamucc\.edu/' hosts
-		#sed 's/\(10\.20\.1\.189\thpcm\.tamucc\.edu\)/\1\n172\.22\.10\.254\thobiserver\.tamucc\.edu/' hosts
-		sudo chmod 555 hosts
-	fi
-else
-	echo hosts file does not exists, copying hosts file to home
-	sudo cp /etc/hosts ./hosts
-	echo adding hpcm.tamucc.edu to hosts
-	sudo chmod 777 hosts
-	sed 's/\(127\.0\.0\.1\tlocalhost\)/\1\n10\.20\.1\.189\thpcm\.tamucc\.edu/' hosts
-	#sed 's/\(10\.20\.1\.189\thpcm\.tamucc\.edu\)/\1\n172\.22\.10\.254\thobiserver\.tamucc\.edu/' hosts
-	sudo chmod 555 hosts
-fi
+#the issue this fixed seems to have been fixed in an wls ubuntu update
+#if [ -f "hosts" ];then
+#	echo hosts file exists
+#	if grep -q '10.20.1.189' hosts; then
+#		echo hpcm.tamucc.edu found, no changes made to hosts
+#	else
+#		echo adding hpcm.tamucc.edu to hosts
+#		sudo chmod 777 hosts
+#		sed 's/\(127\.0\.0\.1\tlocalhost\)/\1\n10\.20\.1\.189\thpcm\.tamucc\.edu/' hosts
+#		#sed 's/\(10\.20\.1\.189\thpcm\.tamucc\.edu\)/\1\n172\.22\.10\.254\thobiserver\.tamucc\.edu/' hosts
+#		sudo chmod 555 hosts
+#	fi
+#else
+#	echo hosts file does not exists, copying hosts file to home
+#	sudo cp /etc/hosts ./hosts
+#	echo adding hpcm.tamucc.edu to hosts
+#	sudo chmod 777 hosts
+#	sed 's/\(127\.0\.0\.1\tlocalhost\)/\1\n10\.20\.1\.189\thpcm\.tamucc\.edu/' hosts
+#	#sed 's/\(10\.20\.1\.189\thpcm\.tamucc\.edu\)/\1\n172\.22\.10\.254\thobiserver\.tamucc\.edu/' hosts
+#	sudo chmod 555 hosts
+#fi
 
 #load new settings
 echo sourcing .bashrc
