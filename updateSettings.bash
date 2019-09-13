@@ -9,10 +9,14 @@ cd ~
 if grep -q 'export winhome' .bashrc; then
 	
 	if grep -q '^bash initialize\.bash$' .bashrc; then
-		echo disabling initialize.bash in .bashrc
-		sed -i 's/^bash initialize\.bash$/#bash initialize\.bash/g' .bashrc
-	else
+		#echo .bashrc will run initialize.bash
 		echo no changes, .bashrc already updated
+		#echo disabling initialize.bash in .bashrc
+		#sed -i 's/^bash initialize\.bash$/#bash initialize\.bash/g' .bashrc
+	else
+		#echo no changes, .bashrc already updated
+		echo .bashrc will now run initialize.bash
+		sed -i 's/^#bash initialize\.bash$/bash initialize\.bash/g' .bashrc
 	fi
 else 
 	echo updating .bashrc
@@ -26,9 +30,9 @@ else
 	echo "#$USER: set TERM to stop nano cursor misbehavior when ssh to server" >> .bashrc
 	echo export TERM=xterm >> .bashrc
 	echo "" >> .bashrc
-	#echo "#$USER: initialize the /etc/hosts so that I don't have to type in IP addresses" >> .bashrc
-	#the issue this fixed seems to have been fixed in an wls ubuntu update
-	#echo bash initialize.bash >> .bashrc
+	echo "#$USER: initialize the /etc/hosts so that I don't have to type in IP addresses" >> .bashrc
+	#when off campus, this is required
+	echo bash initialize.bash >> .bashrc
 fi
 
 
