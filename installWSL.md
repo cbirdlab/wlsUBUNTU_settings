@@ -22,11 +22,11 @@ ___
 
 ___
 
-4. When prompted, type in your username and a password for `UBUNTU`.
+4. When prompted, type in your username and a password for `UBUNTU`. Note that when you type in your password, it will appear that nothing is happening, but rest assured that what you type is being recorded.
 
 ___
 
-5. Clone the following `github` repo to your computer
+5. Clone the following `github` repo to your computer by by copying and pasting the following code into the command prompt:
 
 ```
 git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
@@ -34,7 +34,7 @@ git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
 
 ___
 
-6. Run the `updateSettings.bash` script
+6. Run the `updateSettings.bash` script by copying and pasting the following code into the command prompt:
 
 ```
 . wlsUBUNTU_settings/updateSettings.bash
@@ -42,7 +42,7 @@ ___
 
 ___
 
-7. Delete the repo
+7. Delete the repo by copying and pasting the following code into the command prompt:
 
 ```
 rm -rf wlsUBUNTU_settings
