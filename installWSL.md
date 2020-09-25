@@ -12,7 +12,7 @@ ___
 
 2. Goto the Microsoft Store and search on “Linux”. 
 
-![](images/ms_store.png)
+![](images/ms_store.PNG)
 
 ___
 
