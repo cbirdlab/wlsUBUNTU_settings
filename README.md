@@ -7,7 +7,14 @@ The updateSettings.bash script will defeat some of the bugs in the Ubuntu **W**i
 4. creates a .ssh/config file to enable X11 functionality (run linux gui apps) if xming is installed and running
 5. modifies behavior of cursor when using ssh to connect to a remote server, solving annoying issues with using nano on a rmeote server
 
-## If you've installed Ubuntu, then log into your Ubuntu terminal and run the following commands:
+## If you need to install Ubuntu on Win10 then follow these instructions first:
+
+### [Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!](installWSL.md)
+Enable the windows linux subsystem, install the Ubuntu app, update the settings, and install xming so that you can run gui linux programs.
+
+
+## After installing Ubuntu, log into your `Ubuntu` terminal and run the following commands:
+
 ```
 git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
 . ./wlsUBUNTU_settings/updateSettings.bash
@@ -15,9 +22,6 @@ rm -rf wlsUBUNTU_settings
 ```
 
 
-## If you need to install Ubuntu on Win10 then follow these instructions:
-## [Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!](installWSL.md)
-Enable the windows linux subsystem, install the Ubuntu app, update the settings, and install xming so that you can run gui linux programs.
 
 
 
