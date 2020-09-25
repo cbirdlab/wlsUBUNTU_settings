@@ -10,6 +10,8 @@ Your computer will probably restart. If you get an error message, restart your c
 
 2. Goto the Microsoft Store and search on “Linux”. 
 
+![](images/ms_store.png)
+
 3. Select the newest version of `Ubuntu`,  20.04. Click “Install” button. When complete select “Launch”
 
 ![](images/ubuntu_launch.png)
@@ -36,4 +38,4 @@ rm -rf wlsUBUNTU_settings
 
 8. You should install `xming x server` on windows and run it to run gui apps from `UBUNTU`
 
-![](xming.png)
+![](images/xming.png)
