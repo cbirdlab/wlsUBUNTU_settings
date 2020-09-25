@@ -16,7 +16,7 @@ rm -rf wlsUBUNTU_settings
 
 
 ## If you need to install Ubuntu on Win10 then follow these instructions:
-## [Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!](https://github.com/cbirdlab/wlsUBUNTU_settings/blob/master/InstallLinuxOnWindows_Automated.pdf)
+## [Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!](installWSL.md)
 Enable the windows linux subsystem, install the Ubuntu app, update the settings, and install xming so that you can run gui linux programs.
 
 
