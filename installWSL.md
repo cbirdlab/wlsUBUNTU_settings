@@ -16,7 +16,7 @@ ___
 
 ___
 
-3. Select the newest version of `Ubuntu`,  20.04. Click “Install” button. When complete select “Launch”
+3. Select the newest version of `Ubuntu`,  22.04. Click “Install” button. When complete select “Launch”
 
 ![](images/ubuntu_launch.png)
 
@@ -28,7 +28,8 @@ ___
 
 5. Clone the following `github` repo to your computer by by copying and pasting the following code into the command prompt:
 
-```
+```bash
+cd ~
 git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
 ```
 
@@ -37,7 +38,7 @@ ___
 6. Run the `updateSettings.bash` script by copying and pasting the following code into the command prompt:
 
 ```
-. wlsUBUNTU_settings/updateSettings.bash
+bash wlsUBUNTU_settings/updateSettings.bash
 ```
 
 ___
