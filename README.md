@@ -12,6 +12,30 @@ The updateSettings.bash script will defeat some of the bugs in the Ubuntu **W**i
 ### [Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!](installWSL.md)
 Enable the windows linux subsystem, install the Ubuntu app, update the settings, and install xming so that you can run gui linux programs.
 
+1. Enable Windows Linux Subsystem
+  * In windows search, search on “Features” and select “Turn Windows features on or off”. 
+  * Scroll to bottom of features, select “Windows Subsystem for Linux”, and click ok.
+  * Restart
+
+2. Install Ubuntu
+  * Goto the Microsoft Store and search on “Linux”. 
+  * Select “Get the apps” button
+  * Select the UBUNTU installer and click “Install” button. 
+  * When complete select “Launch”
+  * When prompted, type in your username and a password for UBUNTU.
+
+3. Install Xming
+  * You need to install xming x server on windows and run it to run gui apps from UBUNTU
+  * [Download Xming X Server](https://sourceforge.net/projects/xming)
+  * Copy and paste the following code into your Ubuntu terminal
+  
+  ```bash
+  cd ~
+  mkdir .ssh
+  echo "ForwardX11 yes" > .ssh/config
+  ```
+
+
 
 ## After installing Ubuntu, log into your `Ubuntu` terminal and run the following commands:
 
