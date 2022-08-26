@@ -23,6 +23,9 @@ Enable the windows linux subsystem, install the Ubuntu app, update the settings,
  
 4. download [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&amp%3Bgl=US)
     * you should use this to run ubuntu.  It has some very nice features, like normal copy and paste keys work here
+    * Windows Terminal will open PowerShell automatically. Click the "v" symbol next to the "+" (new tab) button and go to "Settings".
+    * The first option under "Startup" is "Default Profile". Change this to "Ubuntu" and save your changes.
+    * To open again, just type "Terminal" in the taskbar search bar and open the App.
 
 3. Install Xming
     * You need to install xming x server on windows and run it to run gui apps from UBUNTU
