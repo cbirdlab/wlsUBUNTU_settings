@@ -8,6 +8,10 @@ Enable the windows linux subsystem, install the Ubuntu app, update the settings,
 1. Enable Windows Linux Subsystem
   * In windows search, search on “Features” and select “Turn Windows features on or off”. 
   * Scroll to bottom of features, select “Windows Subsystem for Linux”, and click ok.
+  * If that didn't work for you, then 
+   * Open "Windows PowerShell". You can search for it in the same location where you typed "Check for Updates". Open Windows PowerShell by right-clicking and then left-clicking "Run as Administrator". 
+   * In the PowerShell Terminal, run the following command (do NOT copy and paste): `wsl --install`
+  * If that didn't work then [try this](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
   * Restart
 
 2. Install Ubuntu
