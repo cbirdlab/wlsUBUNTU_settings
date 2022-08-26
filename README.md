@@ -37,15 +37,5 @@ Enable the windows linux subsystem, install the Ubuntu app, update the settings,
 
 
 
-## After installing Ubuntu, log into your `Ubuntu` terminal and run the following commands:
-
-```
-git clone https://github.com/cbirdlab/wlsUBUNTU_settings.git
-. ./wlsUBUNTU_settings/updateSettings.bash
-rm -rf wlsUBUNTU_settings
-```
-
-
-
 
 
