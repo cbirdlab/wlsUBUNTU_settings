@@ -3,6 +3,8 @@
 ### [Installing Linux OS UBUNTU on Windows 10 - WITH AUTOMATION!](installWSL.md)
 Enable the windows linux subsystem, install the Ubuntu app, update the settings, and install xming so that you can run gui linux programs.
 
+0. Update Windows to the newest version 
+ * (Windows 10 version 2004 and higher are required, you do not need Windows 11). To update, type "Check for Updates" in the taskbar search bar.
 1. Enable Windows Linux Subsystem
   * In windows search, search on “Features” and select “Turn Windows features on or off”. 
   * Scroll to bottom of features, select “Windows Subsystem for Linux”, and click ok.
