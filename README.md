@@ -20,6 +20,10 @@ Enable the windows linux subsystem, install the Ubuntu app, update the settings,
     * Select the UBUNTU installer and click “Install” button. 
     * When complete select “Launch”
     * When prompted, type in your username and a password for UBUNTU.
+    
+3. If when you log into Ubuntu you are "root" then
+    * add yourself as a user and give yourself sudo privs
+    * [make it so that when you log in, you are you, rather than root](https://askubuntu.com/questions/1376711/how-do-i-change-the-default-user-that-signs-in-on-wsl)
  
 4. download [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&amp%3Bgl=US)
     * you should use this to run ubuntu.  It has some very nice features, like normal copy and paste keys work here
