@@ -22,7 +22,7 @@ Enable the windows linux subsystem, install the Ubuntu app, update the settings,
     * When prompted, type in your username and a password for UBUNTU.
     
 3. If when you log into Ubuntu you are "root" then
-    * add yourself as a user and give yourself sudo privs
+    * [add yourself as a user](https://www.cyberciti.biz/faq/create-a-user-account-on-ubuntu-linux/) and [give yourself sudo privs](https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/)
     ```bash
     # you must replace YourUserName below with your actual user name in ubuntu
     sudo adduser YourUserName
