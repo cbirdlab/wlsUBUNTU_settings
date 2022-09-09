@@ -23,8 +23,15 @@ Enable the windows linux subsystem, install the Ubuntu app, update the settings,
     
 3. If when you log into Ubuntu you are "root" then
     * add yourself as a user and give yourself sudo privs
-    * [make it so that when you log in, you are you, rather than root](https://askubuntu.com/questions/1376711/how-do-i-change-the-default-user-that-signs-in-on-wsl)
+    ```bash
+    # you must replace YourUserName below with your actual user name in ubuntu
+    sudo adduser YourUserName
+    
+    # you must replace YourUserName below with your actual user name in ubuntu
+    usermod -aG sudo YourUserName
     ```
+    * [make it so that when you log in, you are you, rather than root](https://askubuntu.com/questions/1376711/how-do-i-change-the-default-user-that-signs-in-on-wsl)
+    ```bash
     # you must replace YourUserName below with your actual user name in ubuntu
     echo -e "[user]\ndefault=YourUserName" > /etc/wsl.conf
     ```
